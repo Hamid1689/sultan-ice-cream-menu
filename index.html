@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Меню мороженого</title>
+  <link rel="shortcut icon" href="logo.JPG" type="image">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff69b4;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+    <img src="logo.JPG" alt="Логотип Султан" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto 20px;">
+
+  <h1>Наше мороженое</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150.png?text=Пломбир" alt="">
+      <div class="price">30 сом</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150.png?text=Ванильное" alt="">
+      <div class="price">50 сом</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150.png?text=Клубничное" alt="">
+      <div class="price">70 сом</div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150.png?text=Шоколадное" alt="">
+      <div class="price">100 сом</div>
+    </div>
+  </div>
+</body>
+</html>
