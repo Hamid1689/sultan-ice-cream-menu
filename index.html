@@ -3,26 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Меню мороженого</title>
-  <link rel="shortcut icon" href="logo.JPG" type="image">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.JPG" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f8ff;
+      background: #fefae0;
       margin: 0;
-      padding: 40px;
+      padding: 20px;
       text-align: center;
     }
 
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
     h1 {
-      color: #ff69b4;
-      margin-bottom: 30px;
+      color: #d9480f;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 900px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
@@ -30,47 +41,67 @@
       background: #fff;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 15px;
+      padding: 10px;
       transition: transform 0.2s;
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     .card img {
       width: 100%;
+      height: 120px;
+      object-fit: cover;
       border-radius: 10px;
     }
 
     .price {
-      margin-top: 10px;
-      font-size: 18px;
+      margin-top: 8px;
+      font-size: 16px;
       color: #333;
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .price {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
-    <img src="logo.JPG" alt="Логотип Султан" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto 20px;">
+
+  
+  <img src="logo.JPG" alt="Логотип" class="logo">
 
   <h1>Наше мороженое</h1>
+
+  
   <div class="grid">
     <div class="card">
-      <img src="https://via.placeholder.com/200x150.png?text=Пломбир" alt="">
+      <img src="https://cdn.pixabay.com/photo/2017/08/10/03/29/ice-cream-2619011_960_720.jpg" alt="Пломбир">
       <div class="price">30 сом</div>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/200x150.png?text=Ванильное" alt="">
+      <img src="https://cdn.pixabay.com/photo/2015/07/17/13/44/ice-cream-849211_960_720.jpg" alt="Ванильное">
       <div class="price">50 сом</div>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/200x150.png?text=Клубничное" alt="">
+      <img src="https://cdn.pixabay.com/photo/2018/07/11/19/51/ice-cream-3532023_960_720.jpg" alt="Клубничное">
       <div class="price">70 сом</div>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/200x150.png?text=Шоколадное" alt="">
+      <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/ice-cream-311545_960_720.png" alt="Шоколадное">
       <div class="price">100 сом</div>
     </div>
   </div>
+
 </body>
 </html>
+
+     
+ 
