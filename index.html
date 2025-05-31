@@ -2,123 +2,167 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Меню мороженого</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sultan Ice Cream</title>
   <link rel="shortcut icon" href="logo.JPG" type="image/x-icon">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fefae0;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    header {
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .title {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 28px;
+      color: #2c3e50;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+    }
+    .item {
+      background-color: white;
+      border-radius: 10px;
+      width: 200px;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
-    .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 15px;
+    .item img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
     }
-
-    h1 {
-      color: #d9480f;
-      font-size: 24px;
-      margin-bottom: 20px;
+    .item h3 {
+      margin: 10px 0 5px;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-      max-width: 600px;
-      margin: 0 auto;
-      justify-content: center;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 10px;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    .card img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
     .price {
-      margin-top: 8px;
-      font-size: 16px;
-      color: #333;
+      font-size: 20px;
+      font-weight: bold;
     }
-
-    @media (max-width: 400px) {
-      h1 {
-        font-size: 20px;
-      }
-
-      .price {
-        font-size: 15px;
-      }
+    .tag {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      color: white;
     }
+    .blue { background-color: #a0c4ff; }
+    .pink { background-color: #ffafcc; }
+    .yellow { background-color: #ffd6a5; }
+    .green { background-color: #caffbf; }
+
+    .tag.popular { background-color: #3498db; }
+    .tag.season { background-color: #e84393; }
+    .tag.premium { background-color: #f39c12; }
+    .tag.luxury { background-color: #27ae60; }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img src="logo.JPG" alt="Логотип Султан">
+      <div>
+        <h1>Sultan Ice Cream</h1>
+        <p>Вкусное мороженое и напитки</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Мороженое</a>
+      <a href="#">Клубника в шоколаде</a>
+      <a href="#">Напитки</a>
+    </nav>
+  </header>
 
-  <!-- ЛОГОТИП -->
-  <img src="logo.JPG" alt="Логотип" class="logo">
+  <div class="title">Наше Мороженое</div>
 
-  <!-- РАЗДЕЛ МОРОЖЕНОЕ -->
-  <h1>Наше мороженое</h1>
-  <div class="grid">
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2017/08/10/03/29/ice-cream-2619011_960_720.jpg" alt="">
+  <div class="menu">
+    <div class="item blue">
+      <img src="images/classic.png" alt="Классическое мороженое">
+      <h3>Классическое</h3>
+      <p>Нежное ванильное мороженое</p>
       <div class="price">30 сом</div>
+      <div class="tag popular">Популярное</div>
     </div>
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2015/07/17/13/44/ice-cream-849211_960_720.jpg" alt="">
+
+    <div class="item pink">
+      <img src="images/strawberry.png" alt="Клубничное мороженое">
+      <h3>Клубничное</h3>
+      <p>Со свежими ягодами клубники</p>
       <div class="price">50 сом</div>
+      <div class="tag season">Сезонное</div>
     </div>
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2018/07/11/19/51/ice-cream-3532023_960_720.jpg" alt="">
+
+    <div class="item yellow">
+      <img src="images/caramel.png" alt="Карамельное мороженое">
+      <h3>Карамельное</h3>
+      <p>С кусочками карамели и орехами</p>
       <div class="price">70 сом</div>
+      <div class="tag premium">Премиум</div>
     </div>
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/ice-cream-311545_960_720.png" alt="">
+
+    <div class="item green">
+      <img src="images/pistachio.png" alt="Фисташковое мороженое">
+      <h3>Фисташковое</h3>
+      <p>С настоящими фисташками и шоколадом</p>
       <div class="price">100 сом</div>
+      <div class="tag luxury">Люкс</div>
     </div>
   </div>
 
-  <!-- РАЗДЕЛ ГАЗИРОВКА -->
-  <h1 style="margin-top: 40px;">Газированная вода</h1>
-  <div class="grid">
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2016/07/30/20/56/cold-drink-1551373_960_720.jpg" alt="">
-      <div class="price">10 сом</div>
+  <div class="title">Клубника в шоколаде</div>
+
+  <div class="menu">
+    <div class="item" style="background: linear-gradient(to top left, #ff6a6a, #ffa07a);">
+      <img src="images/strawberry_choco.png" alt="Клубника в молочном шоколаде">
+      <h3>Клубника в молочном шоколаде</h3>
+      <p>Свежая клубника в нежном молочном шоколаде</p>
+      <div class="price" style="color: #e74c3c;">130 сом</div>
+      <div class="tag season">Новинка</div>
     </div>
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2017/05/07/08/56/soda-2293983_960_720.jpg" alt="">
-      <div class="price">20 сом</div>
+
+    <div class="item" style="background: linear-gradient(to top left, #c471ed, #f64f59);">
+      <img src="images/strawberry_choco.png" alt="Клубника в тёмном шоколаде">
+      <h3>Клубника в тёмном шоколаде</h3>
+      <p>Отборная клубника в бельгийском тёмном шоколаде</p>
+      <div class="price" style="color: #e74c3c;">150 сом</div>
+      <div class="tag premium">Премиум</div>
     </div>
   </div>
-
-  <!-- ИКОНКА ИНСТАГРАМА -->
-  <div style="margin-top: 50px;">
-    <a href="https://www.instagram.com/sultan.balmuzdaq/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40" style="border-radius: 8px;">
-    </a>
-  </div>
-
 </body>
 </html>
